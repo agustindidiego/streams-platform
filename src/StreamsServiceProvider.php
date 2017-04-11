@@ -121,6 +121,7 @@ class StreamsServiceProvider extends ServiceProvider
      * @var array
      */
     protected $bindings = [
+        'Illuminate\Config\Repository'                                                   => 'Anomaly\Streams\Platform\Config\Repository',
         'Illuminate\Contracts\Debug\ExceptionHandler'                                    => 'Anomaly\Streams\Platform\Exception\ExceptionHandler',
         'Illuminate\Routing\UrlGenerator'                                                => 'Anomaly\Streams\Platform\Routing\UrlGenerator',
         'Illuminate\Contracts\Routing\UrlGenerator'                                      => 'Anomaly\Streams\Platform\Routing\UrlGenerator',
@@ -144,6 +145,7 @@ class StreamsServiceProvider extends ServiceProvider
         'field_type.collection'                                                          => 'Anomaly\Streams\Platform\Addon\FieldType\FieldTypeCollection',
         'plugin.collection'                                                              => 'Anomaly\Streams\Platform\Addon\Plugin\PluginCollection',
         'theme.collection'                                                               => 'Anomaly\Streams\Platform\Addon\Theme\ThemeCollection',
+        'command.config.cache'                                                           => 'Anomaly\Streams\Platform\Stream\Console\Console\ConfigCacheCommand',
     ];
 
     /**

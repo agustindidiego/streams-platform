@@ -14,6 +14,21 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
 {
 
     /**
+     * The bootstrap classes for the application.
+     *
+     * @var array
+     */
+    protected $bootstrappers = [
+        'Anomaly\Streams\Platform\Bootstrap\DetectEnvironment',
+        'Anomaly\Streams\Platform\Bootstrap\LoadConfiguration',
+        'Illuminate\Foundation\Bootstrap\ConfigureLogging',
+        'Illuminate\Foundation\Bootstrap\HandleExceptions',
+        'Illuminate\Foundation\Bootstrap\RegisterFacades',
+        'Illuminate\Foundation\Bootstrap\RegisterProviders',
+        'Illuminate\Foundation\Bootstrap\BootProviders',
+    ];
+
+    /**
      * The application's global HTTP middleware stack.
      *
      * @var array
